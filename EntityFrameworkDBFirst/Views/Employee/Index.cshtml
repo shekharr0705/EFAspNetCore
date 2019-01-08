@@ -1,0 +1,21 @@
+﻿@using EntityFrameworkDBFirst.Models
+@model IEnumerable<Employee>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Employees</title>
+</head>
+<body>
+    <table>
+        @foreach (Employee emp in Model)
+        {
+            <tr>
+                <td>@emp.Id</td>
+                <td>@emp.Name</td>
+                <td>@emp.DepartmentId</td>
+            </tr>
+        }
+    </table>
+    <a asp-action="Add">Add</a>
+</body>
+</html>

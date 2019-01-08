@@ -1,0 +1,25 @@
+﻿@using EntityFrameworkDBFirst.Models
+@model Employee
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Add Employee</title>
+</head>
+<body>
+    <form method="post">
+        <table>
+            <tr>
+                <td><label asp-for="Name"></label></td>
+                <td><input asp-for="Name"></td>
+            </tr>
+            <tr>
+                <td><label asp-for="Department"></label></td>
+                <td><select name="DepartmentId" asp-items="@(new SelectList(ViewBag.Departments,"Id","Name"))"></select></td>
+            </tr>
+            <tr>
+                <td><input type="submit" value="Save" name="Save" /></td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
